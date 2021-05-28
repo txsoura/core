@@ -65,7 +65,7 @@ class QueryParamsRequest extends CoreRequest
             'page' => 'sometimes|required|numeric|min:1',
             'take' => 'sometimes|required|numeric|min:1',
             'date_column' => 'sometimes|required|string',
-            'date_start' => 'sometimes|required|date:before_or_equal:date_end',
+            'date_start' => 'sometimes|required|date:|before_or_equal:date_end',
             'date_end' => 'sometimes|required|date|after_or_equal:date_start',
             'value_column' => 'sometimes|required|string',
             'value_min' => 'sometimes|required|numeric|ite:value_max',
