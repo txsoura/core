@@ -11,7 +11,11 @@ trait SoftDeleteMethodsController
     {
         $id = Arr::last(func_get_args());
 
-        $this->service->forceDestroy($id);
+        if (!$this->service->forceDestroy($id)) {
+            return response()->json([
+                'message' => trans('core::message.delete_failed')
+            ], 400);
+        }
 
         return response()->json([
             'message' => trans('core::message.deleted')
@@ -22,7 +26,11 @@ trait SoftDeleteMethodsController
     {
         $id = Arr::last(func_get_args());
 
-        $this->service->restore($id);
+        if (!$this->service->restore($id)) {
+            return response()->json([
+                'message' => trans('core::message.restore_failed')
+            ], 400);
+        }
 
         return response()->json([
             'message' => trans('core::message.restored')
