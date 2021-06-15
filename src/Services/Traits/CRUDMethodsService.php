@@ -2,6 +2,8 @@
 
 namespace Txsoura\Core\Services\Traits;
 
+use Exception;
+use Illuminate\Support\Facades\Log;
 use Txsoura\Core\Http\Requests\QueryParamsRequest;
 
 trait CRUDMethodsService
@@ -19,7 +21,13 @@ trait CRUDMethodsService
     {
         $this->request = resolve($this->storeRequest);
 
-        return $this->model()::create($this->request->validated());
+        try {
+            return $this->model()::create($this->request->validated());
+        } catch (Exception $e) {
+            Log::error($e->getMessage());
+
+            return false;
+        }
     }
 
     public function show($id)
@@ -33,14 +41,31 @@ trait CRUDMethodsService
     {
         $this->request = resolve($this->updateRequest);
 
-        $model = $this->repository->findOrFail($id);
-        $model->update($this->request->validated());
-        return $model;
+        $model = $this->model()::findOrFail($id);
+
+        try {
+            $model->update($this->request->validated());
+
+            return $model;
+        } catch (Exception $e) {
+            Log::error($e->getMessage());
+
+            return false;
+        }
     }
 
     public function destroy($id)
     {
         $model = $this->model()::findOrFail($id);
-        $model->delete();
+
+        try {
+            $model->delete();
+
+            return true;
+        } catch (Exception $e) {
+            Log::error($e->getMessage());
+
+            return false;
+        }
     }
 }
