@@ -2,8 +2,6 @@
 
 namespace Txsoura\Core\Services\Traits;
 
-use Illuminate\Support\Facades\Log;
-
 trait SoftDeleteMethodsRepository
 {
     /**
