@@ -15,7 +15,7 @@ class QueryParamsRequest extends CoreRequest
     {
         if ($this->include) {
             $this->merge([
-                'include' => Str::lower($this->include)
+                'include' => $this->include
             ]);
         }
         if ($this->q) {
