@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add git merge pull cli
 - Create git cmd shortcuts
 - Repository soft delete trait methods
+- Remove query params request include transformation 
 - Activity log service support
  
 ## [7.0.0] - 2021-05-09
