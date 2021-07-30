@@ -6,10 +6,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [unreleased]
-- Add git merge pull cli
-- Create git cmd shortcuts
-- Repository soft delete trait methods
-- Remove query params request include transformation 
 - Activity log service support
  
 ## [7.0.0] - 2021-05-09
@@ -34,3 +30,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Add new dictionaries words
+
+## [7.0.2] - 2021-07-30
+
+### Fixed
+
+- Remove query params request include transformation
+
+### Added
+
+- Add git merge pull cli
+- Create git cmd shortcuts
+- Repository soft delete trait methods
+
+
+ 
