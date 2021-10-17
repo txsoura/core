@@ -7,7 +7,7 @@ use Illuminate\Support\Arr;
 
 trait SoftDeleteMethodsController
 {
-    public function forceDestroy(Request $request)
+    public function forceDestroy()
     {
         $id = Arr::last(func_get_args());
 
@@ -22,7 +22,7 @@ trait SoftDeleteMethodsController
         ]);
     }
 
-    public function restore(Request $request)
+    public function restore()
     {
         $id = Arr::last(func_get_args());
 
