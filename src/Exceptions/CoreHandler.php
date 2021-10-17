@@ -4,9 +4,12 @@ namespace Txsoura\Core\Exceptions;
 
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Database\Eloquent\RelationNotFoundException;
+use Illuminate\Http\Exceptions\ThrottleRequestsException;
 use Illuminate\Routing\Exceptions\InvalidSignatureException;
+use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException;
 use Symfony\Component\Routing\Exception\RouteNotFoundException;
 use Throwable;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
@@ -50,10 +53,45 @@ class CoreHandler extends ExceptionHandler
             ], 404);
         }
 
+        if (exception instanceof AccessDeniedHttpException) {
+            return response()->json([
+                'message' => trans('core::message.no_permission'),
+                'error' => trans('core::message.access_denied')
+            ], 403);
+        }
+
         if ($exception instanceof InvalidSignatureException && $request->wantsJson()) {
             return response()->json([
                 'error' => trans('core::message.invalid_signature')
             ], 403);
+        }
+
+        if ($exception instanceof ThrottleRequestsException) {
+            return response()->json([
+                'error' => trans('core::message.too_many_requests')
+            ], 429);
+        }
+
+        if ($exception->getMessage() === 'CSRF token mismatch.') {
+            return response()->json([
+                'error' => trans('core::message.invalid_csrf_token')
+            ], 419);
+        }
+
+        if ($exception instanceof UnauthorizedHttpException) {
+
+            if ($exception->getMessage() === 'User not found') {
+                return response()->json([
+                    'message' => trans('core::message.not_found'),
+                    'error' => trans('core::message.user_not_found')
+                ], 404);
+            }
+
+            //To log untreated unauthorized exceptions
+            Log::error('UNAUTHORIZED_EXCEPTION:' . $exception->getMessage());
+            return response()->json([
+                'message' => trans('core::message.unauthenticated')
+            ], 401);
         }
 
         if ($exception instanceof MethodNotAllowedHttpException && $request->wantsJson()) {
