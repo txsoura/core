@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e1626727-59f7-4854-a7e8-ea28ef6f846b" name="Default Changelist" comment="config(makefile): change base branch to master">
+    <list default="true" id="e1626727-59f7-4854-a7e8-ea28ef6f846b" name="Default Changelist" comment="refactor(controller): remove softDeletes request param">
       <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Http/Controllers/Traits/SoftDeleteMethodsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Http/Controllers/Traits/SoftDeleteMethodsController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +22,21 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="TaskManager">
+    <task id="LOCAL-00001" summary="ide: helpers">
+      <created>1634488487062</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1634488487062</updated>
+    </task>
+    <task id="LOCAL-00002" summary="refactor(controller): remove softDeletes request param">
+      <created>1634488522756</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1634488522756</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -36,5 +50,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ide: helpers" />
+    <MESSAGE value="refactor(controller): remove softDeletes request param" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor(controller): remove softDeletes request param" />
   </component>
 </project>
