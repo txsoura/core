@@ -9,9 +9,7 @@ trait SoftDeleteMethodsService
 {
     public function forceDestroy($id)
     {
-        $model = $this->model()::withTrashed()
-            ->whereId($id)
-            ->firstOrFail();
+        $model = $this->repository->findOrFailWithTrashed($id);
 
         try {
             $model->forceDelete();
@@ -26,9 +24,7 @@ trait SoftDeleteMethodsService
 
     public function restore($id)
     {
-        $model = $this->model()::withTrased()
-            ->whereId($id)
-            ->firstOrFail();
+        $model = $this->repository->findOrFailWithTrashed($id);
 
         try {
             $model->restore();

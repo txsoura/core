@@ -41,7 +41,7 @@ trait CRUDMethodsService
     {
         $this->request = resolve($this->updateRequest);
 
-        $model = $this->model()::findOrFail($id);
+        $model = $this->repository->findOrFail($id);
 
         try {
             $model->update($this->request->validated());
@@ -56,7 +56,7 @@ trait CRUDMethodsService
 
     public function destroy($id)
     {
-        $model = $this->model()::findOrFail($id);
+        $model = $this->repository->findOrFail($id);
 
         try {
             $model->delete();

@@ -1,6 +1,6 @@
 <?php
 
-namespace Txsoura\Core\Services\Traits;
+namespace Txsoura\Core\Repositories\Traits;
 
 trait SoftDeleteMethodsRepository
 {
@@ -8,12 +8,16 @@ trait SoftDeleteMethodsRepository
      * @param int $id
      * @return Model|null
      */
-    public function findWithTrased($id)
+    public function findWithTrashed($id)
     {
         return $this->model()::withTrashed()
             ->where('id', $id)
             ->when(key_exists('include', $this->request), function ($query) {
-                return $query->with(explode(',', $this->request['include']));
+                if ($this->checkIncludeColumns()) {
+                    return $query->with(explode(',', $this->request['include']));
+                }
+
+                return $query;
             })
             ->first();
     }
@@ -22,12 +26,16 @@ trait SoftDeleteMethodsRepository
      * @param int $id
      * @return Model|null
      */
-    public function findOrFailWithTrased($id)
+    public function findOrFailWithTrashed($id)
     {
         return $this->model()::withTrashed()
             ->where('id', $id)
             ->when(key_exists('include', $this->request), function ($query) {
-                return $query->with(explode(',', $this->request['include']));
+                if ($this->checkIncludeColumns()) {
+                    return $query->with(explode(',', $this->request['include']));
+                }
+
+                return $query;
             })
             ->firstOrFail();
     }
