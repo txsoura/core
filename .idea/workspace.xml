@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1626727-59f7-4854-a7e8-ea28ef6f846b" name="Default Changelist" comment="changelog: update">
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exceptions/CoreHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exceptions/CoreHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/lang/en/message.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/lang/en/message.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" notifyAboutMissingVendor="false" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" notifyAboutMissingVendor="false" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -58,6 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1634492862887</updated>
       <workItem from="1634492864281" duration="343000" />
+      <workItem from="1634494459459" duration="1454000" />
     </task>
     <task id="LOCAL-00003" summary="feat(repository): improve core get all super query">
       <created>1634492999141</created>
@@ -80,42 +83,7 @@
       <option name="project" value="LOCAL" />
       <updated>1634493086706</updated>
     </task>
-    <task id="LOCAL-00006" summary="fix(repository): put correct SoftDeleteMethodsRepository namespace">
-      <created>1634493679071</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1634493679071</updated>
-    </task>
-    <task id="LOCAL-00007" summary="fix(repository): improve find withTrashed methods &amp; add includes check">
-      <created>1634493739437</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1634493739437</updated>
-    </task>
-    <task id="LOCAL-00008" summary="fix(service): make CRUD update &amp; destroy direct from repository">
-      <created>1634493794054</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1634493794054</updated>
-    </task>
-    <task id="LOCAL-00009" summary="fix(service): replace model queries to repository">
-      <created>1634493845566</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1634493845566</updated>
-    </task>
-    <task id="LOCAL-00010" summary="changelog: update">
-      <created>1634493856424</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1634493856424</updated>
-    </task>
-    <option name="localTasksCounter" value="11" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,11 +107,6 @@
     <MESSAGE value="feat(repository): improve core get all super query" />
     <MESSAGE value="feat(repository): add core find &amp; findOrFail includes check" />
     <MESSAGE value="feat: initialize helper request null" />
-    <MESSAGE value="fix(repository): put correct SoftDeleteMethodsRepository namespace" />
-    <MESSAGE value="fix(repository): improve find withTrashed methods &amp; add includes check" />
-    <MESSAGE value="fix(service): make CRUD update &amp; destroy direct from repository" />
-    <MESSAGE value="fix(service): replace model queries to repository" />
-    <MESSAGE value="changelog: update" />
-    <option name="LAST_COMMIT_MESSAGE" value="changelog: update" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: initialize helper request null" />
   </component>
 </project>
