@@ -1,6 +1,6 @@
 <?php
 
-namespace Txsoura\Core\Services\Traits;
+namespace Txsoura\Core\Repositories\Traits;
 
 trait SoftDeleteMethodsRepository
 {
