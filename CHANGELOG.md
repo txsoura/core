@@ -6,11 +6,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [unreleased]
-- Remove request param from destroy controller function
-- Remove request param from softDeletes controller functions
-- Block unhallowed find & findOfFail relations
-- Fix base softDeletes service functions
-- Update base exceptions
 
 ## [7.0.0] - 2021-05-09
 
@@ -46,3 +41,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add git merge pull cli
 - Create git cmd shortcuts
 - Repository soft delete trait methods
+
+## [7.0.3] - 2021-10-17
+
+### Added
+- Block unhallowed find & findOfFail relations
+- Update/add new base exceptions
+- .gitignore
+
+### Fixed
+- Fix base softDeletes service functions
+
+### Changed
+- Remove request param from destroy controller function
+- Remove request param from softDeletes controller functions
+
+### Removed
+- ./idea directory
