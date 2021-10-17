@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [unreleased]
 - Remove request param from destroy controller function
+- Remove request param from softDeletes controller functions
  
 ## [7.0.0] - 2021-05-09
 
