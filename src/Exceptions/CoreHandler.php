@@ -53,7 +53,7 @@ class CoreHandler extends ExceptionHandler
             ], 404);
         }
 
-        if (exception instanceof AccessDeniedHttpException) {
+        if ($exception instanceof AccessDeniedHttpException) {
             return response()->json([
                 'message' => trans('core::message.no_permission'),
                 'error' => trans('core::message.access_denied')
