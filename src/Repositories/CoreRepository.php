@@ -158,7 +158,11 @@ abstract class CoreRepository implements CoreRepositoryInterface
     {
         return $this->model()::where('id', $id)
             ->when(key_exists('include', $this->request), function ($query) {
-                return $query->with(explode(',', $this->request['include']));
+                if ($this->checkIncludeColumns()) {
+                    return $query->with(explode(',', $this->request['include']));
+                }
+
+                return $query;
             })
             ->first();
     }
@@ -171,7 +175,11 @@ abstract class CoreRepository implements CoreRepositoryInterface
     {
         return $this->model()::where('id', $id)
             ->when(key_exists('include', $this->request), function ($query) {
-                return $query->with(explode(',', $this->request['include']));
+                if ($this->checkIncludeColumns()) {
+                    return $query->with(explode(',', $this->request['include']));
+                }
+
+                return $query;
             })
             ->firstOrFail();
     }
