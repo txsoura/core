@@ -9,7 +9,7 @@ trait Helpers
     /**
      * @var Request
      */
-    protected $request;
+    protected $request = [];
 
     /**
      * @var array
