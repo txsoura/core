@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Remove request param from softDeletes controller functions
 - Block unhallowed find & findOfFail relations
 - Fix base softDeletes service functions
+- Update base exceptions
 
 ## [7.0.0] - 2021-05-09
 
