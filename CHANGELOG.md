@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [unreleased]
-- Activity log service support
+- Remove request param from destroy controller function
  
 ## [7.0.0] - 2021-05-09
 
@@ -42,6 +42,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add git merge pull cli
 - Create git cmd shortcuts
 - Repository soft delete trait methods
-
-
- 

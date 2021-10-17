@@ -61,7 +61,7 @@ trait CRUDMethodsController
             ->additional(['message' => trans('core::message.updated')]);
     }
 
-    public function destroy(Request $request)
+    public function destroy()
     {
         $id = Arr::last(func_get_args());
 
