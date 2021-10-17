@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f9bce47-ad85-491a-81fc-a82f23ae76fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.dcignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Http/Controllers/Traits/CRUDMethodsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Http/Controllers/Traits/CRUDMethodsController.php" afterDir="false" />
+    <list default="true" id="8f9bce47-ad85-491a-81fc-a82f23ae76fc" name="Default Changelist" comment="feat(controller): remove destroy request param">
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +28,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -43,8 +44,23 @@
       <option name="presentableId" value="Default" />
       <updated>1634486319081</updated>
       <workItem from="1634486320779" duration="91000" />
-      <workItem from="1634486424507" duration="48000" />
+      <workItem from="1634486424507" duration="373000" />
     </task>
+    <task id="LOCAL-00001" summary="ide: helpers">
+      <created>1634486499964</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1634486499964</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat(controller): remove destroy request param">
+      <created>1634486554291</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1634486554291</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -63,5 +79,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="ide: helpers" />
+    <MESSAGE value="feat(controller): remove destroy request param" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(controller): remove destroy request param" />
   </component>
 </project>
