@@ -68,12 +68,18 @@ abstract class CoreRepository implements CoreRepositoryInterface
         $this->setParams($this->checkWhereColumns());
 
         $models = $this->model()::when(key_exists('onlyTrashed', $this->request), function ($query) {
-            if ($this->request['onlyTrashed'])
+            if ($this->request['onlyTrashed']){
                 $query->onlyTrashed();
+            }
+
+            return $query;
         })
             ->when(key_exists('withTrashed', $this->request), function ($query) {
-                if ($this->request['withTrashed'])
+                if ($this->request['withTrashed']){
                     return $query->withTrashed();
+                }
+
+                return $query;
             })
             ->when(key_exists('date_column', $this->request), function ($query) {
                 if ($this->checkDateColumns()) {
