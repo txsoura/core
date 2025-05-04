@@ -68,3 +68,9 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ### Fixed
 
 - Fix access denied exception
+
+## [7.0.4] - 2025-05-04
+
+### Added
+
+- Create CheckAuthLocale middleware to get the locale from the authenticated user
