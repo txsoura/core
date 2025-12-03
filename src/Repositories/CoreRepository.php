@@ -72,6 +72,7 @@ abstract class CoreRepository implements CoreRepositoryInterface
     public function all()
     {
         $this->setParams($this->checkWhereColumns());
+        $this->setParams($this->checkBooleanColumns());
 
         $models = $this->model()::when(key_exists('onlyTrashed', $this->request), function ($query) {
             if ($this->request['onlyTrashed']){
