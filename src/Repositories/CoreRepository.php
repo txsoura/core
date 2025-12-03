@@ -35,6 +35,12 @@ abstract class CoreRepository implements CoreRepositoryInterface
     protected $allow_where = array();
 
     /**
+     * Allowed model columns to use in conditional boolean query
+     * @var array
+     */
+    protected $allow_boolean = array();
+
+    /**
      * Allowed model columns to use in sort
      * @var array
      */
@@ -113,6 +119,13 @@ abstract class CoreRepository implements CoreRepositoryInterface
             ->when($this->params, function ($query) {
                 foreach (array_keys($this->params) as $column) {
                     $query->where($column, $this->params[$column]);
+                }
+
+                return $query;
+            })
+            ->when($this->booleanParams, function ($query) {
+                foreach (array_keys($this->booleanParams) as $column) {
+                    $query->where($column, filter_var($this->booleanParams[$column], FILTER_VALIDATE_BOOLEAN));
                 }
 
                 return $query;

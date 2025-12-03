@@ -17,6 +17,11 @@ trait Helpers
     protected $params = [];
 
     /**
+     * @var array
+     */
+    protected $booleanParams = [];
+
+    /**
      * @param Request $request
      * @return $this
      */
@@ -32,6 +37,15 @@ trait Helpers
     function setParams(array $params)
     {
         $this->params = $params;
+        return $this;
+    }
+
+    /**
+     * @return $this
+     */
+    function setBooleanParams(array $booleanParams)
+    {
+        $this->booleanParams = $booleanParams;
         return $this;
     }
 }

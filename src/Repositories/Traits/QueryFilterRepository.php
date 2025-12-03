@@ -74,5 +74,18 @@ trait QueryFilterRepository
 
         return $columns;
     }
+
+    public function checkBooleanColumns()
+    {
+        $columns = [];
+
+        foreach (array_keys($this->request) as $column) {
+            if (in_array($column, $this->allow_boolean)) {
+                Arr::set($columns, $column, $this->request[$column]);
+            }
+        }
+
+        return $columns;
+    }
 }
 
