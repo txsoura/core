@@ -76,6 +76,7 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Create CheckAuthLocale middleware to get the locale from the authenticated user
 
 ## [7.1.0] - 2025-12-03
+## [7.1.1] - 2025-12-03
 
 ### Added
 
