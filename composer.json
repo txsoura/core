@@ -2,7 +2,7 @@
     "name": "txsoura/core",
     "description": "Txsoura Core - Simple Core Repository Pattern lib to Rest API's",
     "type": "library",
-    "version": "7.1.0",
+    "version": "7.1.1",
     "keywords": [
         "repository",
         "core",
